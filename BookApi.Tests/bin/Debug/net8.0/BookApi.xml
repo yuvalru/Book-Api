@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BookApi</name>
+    </assembly>
+    <members>
+        <member name="M:BookApi.Controllers.BooksController.GetAll(System.Int32,System.Int32)">
+            <summary>
+            List all books with pagination
+            </summary>
+        </member>
+        <member name="M:BookApi.Controllers.BooksController.GetById(System.Int32)">
+            <summary>
+            Get specific book by ID
+            </summary>
+        </member>
+        <member name="M:BookApi.Controllers.BooksController.Create(BookApi.Models.Book)">
+            <summary>
+            Create new book entries
+            </summary>
+        </member>
+        <member name="M:BookApi.Controllers.BooksController.Update(System.Int32,BookApi.Models.Book)">
+            <summary>
+            Update existing book
+            </summary>
+        </member>
+        <member name="M:BookApi.Controllers.BooksController.Delete(System.Int32)">
+            <summary>
+            Delete a book by ID
+            </summary>
+        </member>
+        <member name="M:BookApi.Controllers.BooksController.Search(System.String)">
+            <summary>
+            Search for books by title or author
+            </summary>
+        </member>
+        <member name="T:BookApi.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:BookApi.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BookApi.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BookApi.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
