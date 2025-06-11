@@ -18,15 +18,18 @@ A simple and clean RESTful Web API for managing books, built with .NET 8 and Ent
 
 ### Running the Application
 
-1. Restore the database (if needed):
+1. Navigate into the main project folder:
+    cd BookApi
+
+2. Apply database migrations (if needed):
     dotnet ef database update
 
-2. Run the application:
+3. Run the application:
     dotnet run
 
-
-3. Open your browser and navigate to:
-    http://localhost:5002/swagger
+4. Open your browser and navigate to:
+    - Swagger UI: http://localhost:5002/swagger
+    - Books endpoint: http://localhost:5002/api/books
 
 ## API Endpoints
 
@@ -73,29 +76,32 @@ To run the tests:
     cd BookApi.Tests
     dotnet test
 
+## Development Decisions
+This project uses SQLite as the database engine due to its simplicity and ease of setup for small-scale applications and demos. It allows running and testing the application locally without the need for additional database server configuration.
+The project structure follows a clean and minimal organization to keep the logic focused and maintainable. Unit tests were implemented using an in-memory database for isolation and repeatability.
+
+## Future Improvements
+- Add integration tests for API endpoints
+- Add support for Docker-based deployment
+- Input validation using DataAnnotations
 
 ## Technologies Used
-
 - C#
 - .NET 8
 - ASP.NET Core Web API
 - Entity Framework Core
 - SQLite
-- Swagger / OpenAPI
+- Swagger
+- xUnit for unit testing
 
-
-##Development Notes
--The database is built and maintained using EF Core migrations.
--All operations are asynchronous for performance and scalability.
--Code is structured for clarity and future extensibility.
-
-##Possible Extensions
--Input validation using DataAnnotations
--Unit testing (xUnit or NUnit)
--Docker support
--Clean architecture or layered design
+## Development Notes
+- The database is built and maintained using EF Core migrations.
+- All controller operations are implemented asynchronously.
+- Code is structured for clarity and future extensibility.
+- Unit tests use an in-memory EF Core database to simulate real behavior
+- The API supports searching and pagination for scalability and usability
 
 Author
 Yuval Rubin
 Computer Science BSc, Ben-Gurion University
-GitHub: https://github.com/yuvalrubi
+GitHub: https://github.com/yuvalru
